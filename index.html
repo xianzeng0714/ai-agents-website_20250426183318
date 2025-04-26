@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Agents</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            color: #fff;
+            padding: 0.5rem 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            transition: background-color 0.3s ease;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #333;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .agent-card {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .agent-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .agent-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .agent-card h3 {
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+
+        .agent-card p {
+            margin-bottom: 0.75rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.25rem;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .chart-container {
+            width: 100%;
+            height: 300px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            nav a {
+                display: block;
+                padding: 0.75rem;
+                margin-bottom: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>AI Agents</h1>
+        <p>Explore the world of AI agents and their capabilities</p>
+    </header>
+
+    <nav>
+        <a href="#overview">Overview</a>
+        <a href="#examples">Examples</a>
+        <a href="#technologies">Technologies</a>
+        <a href="#implementation">Implementation</a>
+    </nav>
+
+    <div class="container">
+        <section id="overview">
+            <h2>Overview</h2>
+            <p>This website provides resources and information on building AI agents, particularly those that utilize Google Search and Google Images. Explore various templates, code examples, and key technologies to create intelligent and automated agents.</p>
+        </section>
+
+        <section id="examples">
+            <h2>AI Agent Examples</h2>
+
+            <h3>General Purpose AI Agents</h3>
+            <div class="agent-card">
+                <h4>Relevance AI</h4>
+                <p>Offers a Google Search AI Template, allowing agents to gather information, analyze search results, and compile comprehensive overviews of topics.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+
+            <div class="agent-card">
+                <h4>Beam AI</h4>
+                <p>Provides pre-trained AI Agent templates with tools and integrations, including agents for data extraction, data entry, document review, data collection, and ETL.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+
+            <h3>Customer Support AI Agents</h3>
+            <div class="agent-card">
+                <h4>Elfsight</h4>
+                <p>Offers an AI Agent template for websites that acts as a virtual assistant to handle customer inquiries. It integrates with various website platforms.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+
+            <h3>Search-Specific AI Agents</h3>
+            <div class="agent-card">
+                <h4>Enonic</h4>
+                <p>Demonstrates using a Google AI Agent to enhance website search functionality, providing intelligent search experiences using generative AI and content indexing.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+
+            <div class="agent-card">
+                <h4>Google Cloud Vertex AI Search</h4>
+                <p>Allows you to search for images on websites using a text string or an image query.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+
+            <h3>Lead Generation & Research Agents</h3>
+            <div class="agent-card">
+                <h4>Zapier Agents</h4>
+                <p>Offers agent templates for automating tasks across various apps, including lead qualification, outreach, and lead generation research.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+        </section>
+
+        <section id="technologies">
+            <h2>Key Technologies & Concepts</h2>
+
+            <ul>
+                <li><strong>RAG (Retrieval Augmented Generation):</strong> Tailors AI responses using content specific to your database, ensuring more precise and relevant answers.</li>
+                <li><strong>Vector Databases:</strong> Organize content by associating related information, enabling AI to find the closest matches to a query.</li>
+                <li><strong>Text Embeddings:</strong> Numeric representations of text content used to approximate the semantic meaning of the text.</li>
+                <li><strong>Genkit:</strong> Google's framework for building AI features, allowing you to chain multiple steps into reusable "Flows".</li>
+            </ul>
+        </section>
+
+        <section id="implementation">
+            <h2>Implementation</h2>
+
+            <h3>Elfsight AI Agent</h3>
+            <ol>
+                <li>Build and train the AI Assistant widget.</li>
+                <li>Sign up for an Elfsight account.</li>
+                <li>Get the unique embedding code.</li>
+                <li>Paste the code into your website editor.</li>
+            </ol>
+
+            <h3>Firebase Studio</h3>
+            <ol>
+                <li>Go to studio.firebase.google.com and create a workspace.</li>
+                <li>Use the "App Prototyping" feature.</li>
+                <li>Enter a prompt describing your app.</li>
+                <li>Let the AI generate the app.</li>
+                <li>Iterate using the Gemini chat panel.</li>
+                <li>Preview and deploy the app.</li>
+            </ol>
+
+            <h3>Docs Agent</h3>
+            <ol>
+                <li>Create a directory for your content.</li>
+                <li>Copy your content into the directory.</li>
+                <li>Clean/edit the content.</li>
+                <li>Process the content to create text embedding vectors.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>AI Agent Images</h2>
+            <div class="agent-card">
+                <img src="https://cdn.prod.website-files.com/669a24c14f4dcb77f6f97034/67b61474fe442789178f8899_https%253A%252F%252Fdev-to-uploads.s3.amazonaws.com%252Fuploads%252Farticles%252Ficryeiambs060c9verx6.png" alt="AI Agent 1">
+                <h3>Agents 101</h3>
+                <p>How to build your first AI Agent in 30 minutes!</p>
+            </div>
+            <div class="agent-card">
+                <img src="https://news.microsoft.com/source/wp-content/uploads/2024/11/AI-agents-hero-social.png" alt="AI Agent 2">
+                <h3>AI agents</h3>
+                <p>What they are, and how they'll change the way we work</p>
+            </div>
+            <div class="agent-card">
+                <img src="https://writer.com/wp-content/uploads/2025/04/2025-01-AI-agents-in-the-enterprise_-What-business-leaders-need-to-know-2-1.png?w=1000" alt="AI Agent 3">
+                <h3>AI agents in the enterprise</h3>
+                <p>What business leaders need to know</p>
+            </div>
+            <div class="agent-card">
+                <img src="https://eluminoustechnologies.com/blog/wp-content/uploads/2024/06/The-Types-of-AI-Agents.png" alt="AI Agent 4">
+                <h3>What are AI Agents?</h3>
+                <p>How They Work, Types, and Use Cases</p>
+            </div>
+            <div class="agent-card">
+                <img src="https://imageio.forbes.com/specials-images/imageserve/67e252b93cf4dd3365504649/AI-agents-represent-the-next-evolutionary-leap-beyond-generative-AI--capable-of/960x0.jpg?format=jpg&width=960" alt="AI Agent 5">
+                <h3>How AI Agents Will Revolutionize Your Day-To-Day Life</h3>
+                <p>AI agents represent the next evolutionary leap beyond generative AI</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 AI Agents. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript for Interactive Components (Example: Chart)
+        function generateChartData() {
+            const data = [];
+            for (let i = 0; i < 10; i++) {
+                data.push({ label: `Data ${i + 1}`, value: Math.floor(Math.random() * 100) });
+            }
+            return data;
+        }
+
+        function createChart(data) {
+            const chartContainer = document.querySelector('.chart-container');
+            if (!chartContainer) return;
+
+            const canvas = document.createElement('canvas');
+            chartContainer.appendChild(canvas);
+            const ctx = canvas.getContext('2d');
+
+            canvas.width = chartContainer.offsetWidth;
+            canvas.height = chartContainer.offsetHeight;
+
+            const barWidth = canvas.width / data.length - 10;
+            const maxValue = Math.max(...data.map(item => item.value));
+            const scale = canvas.height / maxValue;
+
+            data.forEach((item, index) => {
+                const barHeight = item.value * scale;
+                const x = index * (barWidth + 10);
+                const y = canvas.height - barHeight;
+
+                ctx.fillStyle = '#007bff';
+                ctx.fillRect(x, y, barWidth, barHeight);
+
+                ctx.fillStyle = '#333';
+                ctx.font = '12px sans-serif';
+                ctx.textAlign = 'center';
+                ctx.fillText(item.label, x + barWidth / 2, canvas.height - 5);
+            });
+        }
+
+        // Example Table Data
+        function generateTableData() {
+            return [
+                { name: 'Agent A', functionality: 'Data Extraction', rating: 4.5 },
+                { name: 'Agent B', functionality: 'Customer Support', rating: 4.2 },
+                { name: 'Agent C', functionality: 'Lead Generation', rating: 4.8 }
+            ];
+        }
+
+        // Create Table Function
+        function createTable(data) {
+            const tableContainer = document.getElementById('table-container');
+            if (!tableContainer) return;
+
+            const table = document.createElement('table');
+            const thead = document.createElement('thead');
+            const tbody = document.createElement('tbody');
+
+            // Create Table Headers
+            const headers = Object.keys(data[0]);
+            const headerRow = document.createElement('tr');
+            headers.forEach(headerText => {
+                const th = document.createElement('th');
+                th.textContent = headerText.toUpperCase();
+                headerRow.appendChild(th);
+            });
+            thead.appendChild(headerRow);
+            table.appendChild(thead);
+
+            // Create Table Rows
+            data.forEach(item => {
+                const row = document.createElement('tr');
+                headers.forEach(header => {
+                    const td = document.createElement('td');
+                    td.textContent = item[header];
+                    row.appendChild(td);
+                });
+                tbody.appendChild(row);
+            });
+            table.appendChild(tbody);
+
+            tableContainer.appendChild(table);
+        }
+
+
+        // Initialize Chart and Table (if containers exist)
+        window.onload = () => {
+            const chartData = generateChartData();
+            createChart(chartData);
+            const tableData = generateTableData();
+
+            const tableContainer = document.createElement('div');
+            tableContainer.id = 'table-container';
+            const implementationSection = document.getElementById('implementation');
+            implementationSection.parentNode.insertBefore(tableContainer, implementationSection.nextSibling);
+
+            createTable(tableData);
+        };
+    </script>
+</body>
+</html>
